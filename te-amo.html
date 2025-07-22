@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TE AMO 💖</title>
+  <link rel="stylesheet" href="rosa.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="glass">
+      <div class="shine"></div>
+    </div>
+
+    <div class="thorns">
+      <div></div><div></div><div></div><div></div>
+    </div>
+
+    <div class="leaves">
+      <div></div><div></div><div></div><div></div>
+    </div>
+
+    <div class="petals">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <div class="deadPetals">
+      <div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <!-- Botón para abrir carta -->
+  <button id="btnCarta" class="btn-carta">Abrir Carta</button>
+
+  <!-- Carta modal -->
+  <div id="carta" class="carta-oculta">
+    <div class="contenido-carta">
+      <h2>PARA MI AMOR PIA FERNANDA IBARRA BLANCO:</h2>
+      <p>
+        Esta rosa es como la que te regalé, para que siempre la tengas contigo y recuerdes cuánto te amo. Gracias por todo lo que haces por mí y por este hermoso primer mes que hemos compartido. Sé que solo es el comienzo de muchos más que vendrán, llenos de amor, aprendizajes y momentos inolvidables.
+
+        Eres la mejor mi amor. Cada pequeño gesto tuyo me enamora aún más, y no hay día en que no me sienta afortunado de tenerte a mi lado. Me encantas por cómo eres, por lo que haces y por todo lo que compartimos.
+
+        Quiero que sepas que siempre voy a estar para ti, para todo lo que necesites. Si alguna vez necesitas hablar, desahogarte o simplemente tener a alguien cerca, ahí estaré. Porque para eso somos pareja, para apoyarnos mutuamente, acompañarnos en todo y crecer juntos.
+
+        Tú sabes que me cuesta abrirme escribiéndote o diciéndote cosas pero quiero que de verdad veas que te amo más que la xuxa jaja.
+
+        Te amo con todo mi corazón, y cada día que pasa me haces más feliz.
+
+        Besitoooo ❤️
+      </p>
+      <button id="cerrarCarta">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Botón Volver -->
+  <button onclick="window.location.href='index.html'" class="btn-volver">VOLVER</button>
+
+  <script>
+    const btnCarta = document.getElementById('btnCarta');
+    const carta = document.getElementById('carta');
+    const cerrarCarta = document.getElementById('cerrarCarta');
+
+    btnCarta.addEventListener('click', () => {
+      carta.classList.add('carta-visible');
+    });
+
+    cerrarCarta.addEventListener('click', () => {
+      carta.classList.remove('carta-visible');
+    });
+
+    carta.addEventListener('click', (e) => {
+      if (e.target === carta) {
+        carta.classList.remove('carta-visible');
+      }
+    });
+  </script>
+</body>
+</html>
